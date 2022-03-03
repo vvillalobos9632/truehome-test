@@ -1,0 +1,63 @@
+BEGIN;
+
+CREATE DATABASE "TrueHomeTest"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+CREATE TABLE IF NOT EXISTS public."Activity"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    property_id integer NOT NULL,
+    schedule timestamp without time zone NOT NULL,
+    title character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_ad timestamp without time zone NOT NULL,
+    status character varying(35) COLLATE pg_catalog."default",
+    CONSTRAINT "Activity_pkey" PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public."Property"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    title character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    address text COLLATE pg_catalog."default" NOT NULL,
+    description text COLLATE pg_catalog."default" NOT NULL,
+    create_at timestamp without time zone NOT NULL,
+    update_at timestamp without time zone NOT NULL,
+    disable_at timestamp without time zone,
+    status character varying(35) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Property_pkey" PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public."Survey"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    activity_id integer NOT NULL,
+    answers json NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    CONSTRAINT "Survey_pkey" PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS public.usuario
+(
+    id_usuario integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    nombre character varying(300) COLLATE pg_catalog."default" NOT NULL,
+    nombre_usuario character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    "contraseña" character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    activo boolean NOT NULL,
+    CONSTRAINT usuario_pkey PRIMARY KEY (id_usuario)
+);
+
+ALTER TABLE IF EXISTS public."Activity"
+    ADD CONSTRAINT "Activity_property_id_fkey" FOREIGN KEY (property_id)
+    REFERENCES public."Property" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+END;

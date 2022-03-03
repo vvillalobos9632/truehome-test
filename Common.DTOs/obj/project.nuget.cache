@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7bxusATGUmqWebb8YUuoId3340jc60tXKbG+tSO6hWL3pFAOs9uOxPQcALsywQw1JblT1B3prG/HXqWM+b5dQw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Victor\\Documents\\GitHub\\truehome-test-backend\\Common.DTOs\\Common.DTOs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Victor\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512"
+  ],
+  "logs": []
+}

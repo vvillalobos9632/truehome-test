@@ -1,0 +1,5 @@
+D:\Devs\Repos\TrueHomeTest\BackEnd\TrueHomeTest\obj\Debug\net5.0\TrueHomeTest.csproj.AssemblyReference.cache
+D:\Devs\Repos\TrueHomeTest\BackEnd\TrueHomeTest\obj\Debug\net5.0\TrueHomeTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\Devs\Repos\TrueHomeTest\BackEnd\TrueHomeTest\obj\Debug\net5.0\TrueHomeTest.AssemblyInfoInputs.cache
+D:\Devs\Repos\TrueHomeTest\BackEnd\TrueHomeTest\obj\Debug\net5.0\TrueHomeTest.AssemblyInfo.cs
+D:\Devs\Repos\TrueHomeTest\BackEnd\TrueHomeTest\obj\Debug\net5.0\TrueHomeTest.csproj.CoreCompileInputs.cache

@@ -1,0 +1,30 @@
+{
+  "DeployConnectionStrings": {
+    "Deploy": "Localhost"
+  },
+  "Localhost": {
+    "TrueHomeContext": "viVySO8a5kPSM|JV||JV|n5UiUDriPlT|JV|p4LkzcoQ3s|||lKUECmC4lciEuzMuWmmccNsvyVo1s5cNWjXRdL31DCcy5wzlOq6rMnKBAM"
+  },
+  "PolicyRules": {
+    "Rule": "TrueHomePolicyRules"
+  },
+  "HashToEncryption": {
+    "Value": ""
+  },
+  "TokenValidationParameters": {
+    "ValidateIssuer": true,
+    "ValidateAudience": true,
+    "ValidateLifetime": true,
+    "ValidateIssuerSigningKey": true,
+    "ValidIssuer": "www.truehometest.com",
+    "ValidAudience": "www.truehometest.com",
+    "SecurityKey": "KANSDJSBAJHKDBSAHDBSAHDBASAS6616218115113112dPIQWHEQWNJCAHKSF",
+    "MinExpiresToken": 1440
+  },
+  "AllowedOriginsLocal": {
+    "Origins": [
+      "http://localhost:4200",
+      "http://localhost:4201"
+    ]
+  }
+}
